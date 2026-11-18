@@ -1,0 +1,18 @@
+name: First example
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run example
+        run: echo "Hello from GitHub Actions"
+
+      - name: Read file
+        run: cat README.md
